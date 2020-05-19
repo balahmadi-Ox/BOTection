@@ -6,6 +6,8 @@ BOTection is content-agnostic and resilient to encryption, relying on high-level
 
 ![Image of Botection](https://github.com/balahmadi-Ox/BOTection/blob/master/Botection_system.jpg)
 
+## About
+This repository contains the code for the paper "[BOTection:  Bot Detection by Building Markov Chain Models of Bots' Network Behavior](https://seclab.bu.edu/people/gianluca/papers/botection-asiaccs2020.pdf)" to Appear in the [15th ACM ASIA Conference on Computer and Communications Security (ACM AsiaCCS'20)](https://asiaccs2020.cs.nthu.edu.tw).
 
 ## Getting Started
 
