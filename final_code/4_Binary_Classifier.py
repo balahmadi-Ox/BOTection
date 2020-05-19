@@ -1,0 +1,73 @@
+
+# coding: utf-8
+
+# In[ ]:
+
+
+"""
+BOTection - Binary Classifier
+Created by balahmadi @balahmadi_OX
+
+@author: balahmadi - 2020
+"""
+
+# 4. Binary Classification (Malware Detection) Detect malicious n-flows.
+#   Train a RF binary classifier to classify n-flows to Malicious or Benign
+
+import pandas as pd
+import numpy as np
+import math
+from sklearn.decomposition import PCA
+import sklearn.metrics as metrics
+from sklearn.model_selection import cross_val_predict
+from sklearn.ensemble import RandomForestClassifier as RF
+from sklearn.preprocessing import scale
+import dill as pickle 
+from sklearn.model_selection import train_test_split
+import sys  
+import os
+import csv 
+
+n_flows = [10,15,35,30,25,20,10]
+
+for n in n_flows:
+    
+    with open("./Data/MM_StateTransition/dataset_" + str(n), "rb") as f:
+        dataset = pickle.load(f)
+   
+    dataset.dropna(axis=1, how='any')  
+    to_drop=["Family","Class","filename"]
+    y = dataset['Class']
+    X = dataset.drop(to_drop, axis=1)
+    col_names=dataset.columns    
+    X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.33, random_state=42, stratify=y)
+   
+    X_train=X_train.as_matrix().astype(np.float)
+    X_test=X_test.as_matrix().astype(np.float)
+   
+    # Binarize the output
+    y_train = pd.factorize(y_train)
+    y_test = pd.factorize(y_test)
+   
+    class_Names=y_test[1]
+                               
+    y_train = y_train[0]
+    y_test = y_test[0]
+    
+    print ('-------------- Results: n = ' + str(n) + ' ---------------')
+    print('Number of malicious samples (training): ' + str(list(y_train).count(0)))
+    print('Number of benign samples (training): ' + str(list(y_train).count(1)))
+    print('Number of malicious samples (testing): ' + str(list(y_test).count(0)))
+    print('Number of benign samples (testing): ' + str(list(y_test).count(1)))
+    
+    print ('-------------- Precision - Recall - F1 Score Report ---------------')
+    classifier = RF(n_estimators=101, max_features=None, class_weight ='balanced')
+    model = classifier.fit(X_train,y_train)
+    y_pred = model.predict(X_test)
+    print (metrics.classification_report(y_test, y_pred, target_names = class_Names , digits=4))
+
+    print ('----- Precision - Recall - F1 Score Report (Cross Validation) -----')
+    # When applying cross-validation
+    y_pred = cross_val_predict(RF(n_estimators=101, max_features=None, class_weight ='balanced'), X, y, cv=10)
+    print (metrics.classification_report(y, y_pred, target_names =  class_Names , digits=4))
+
