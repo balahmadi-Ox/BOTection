@@ -19,41 +19,24 @@ In our paper, we used the following datasets:
 * [CTU-13](https://www.stratosphereips.org/datasets-ctu13)
 * [ISCX Botnet 2014 Dataset](https://www.unb.ca/cic/datasets/botnet.html)
 
+## How to run the code
 
+You can run this code on a python/anaconda environment. 
+ 1. **read the [paper](https://seclab.bu.edu/people/gianluca/papers/botection-asiaccs2020.pdf)** 
 
-## Reproduce Evaluation
-
-The code runs inside a Docker container and requires `docker` and `docker-compose` to be installed in your system.
-
-You might be able to make this work on a generic python/anaconda environment with some effort. 
-  
-To reproduce the evaluation, follow these steps:
- 1. **read the [paper](https://arxiv.org/pdf/2004.07088.pdf)** - this is the only way you will understand what you are doing
- 1. Clone this repository
- 1. download the [dataset](https://ora.ox.ac.uk/objects/uuid:1a04e852-e7e1-4981-aa83-f2e729371484) used in the paper, unzip the archive and place the downloaded `videos` folder in `seeing-red/data/`
- 1. build and start the container by running `docker-compose up -d`
- 1. attach to the container with `docker attach seeingred_er`
- 1. in the container, `cd /home/code` and run the entire signal analysis pipeline with `python signal_run_all.py`
-
-Results will be produced in several subfolders in `seeing-red/data/`.
 
 ## Citation
 If you use this repository please cite the paper as follows:
 ```
-@inproceedings{lovisotto2020seeing,
-  title={Seeing Red: PPG Biometrics Using Smartphone Cameras},
-  author={Lovisotto, Giulio and Turner, Henry and Eberz, Simon and Martinovic, Ivan},
-  booktitle={IEEE 15th Computer Society Workshop on Biometrics},
-  year={2020}
+@article{alahmadi2019botection,
+  title={BOTection: bot detection by building Markov Chain models of bots network behavior},
+  author={Alahmadi, B and Mariconti, E and Spolaor, R and Stringhini, G and Martinovic, I},
+  year={2019},
+  publisher={Association for Computing Machinery}
 }
+
 ```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
