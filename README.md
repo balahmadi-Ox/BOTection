@@ -17,7 +17,7 @@ In order to convert the PCAPs to Bro/Zeek logs, make sure to install [Zeek/Bro](
 In our paper, we used the following datasets:
 * [Stratosphere IPS](https://www.stratosphereips.org/datasets-overview)
 * [CTU-13](https://www.stratosphereips.org/datasets-ctu13)
-*[ISCX Botnet 2014 Dataset](https://www.unb.ca/cic/datasets/botnet.html)
+* [ISCX Botnet 2014 Dataset](https://www.unb.ca/cic/datasets/botnet.html)
 
 
 
