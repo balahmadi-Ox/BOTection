@@ -14,12 +14,7 @@ This repository contains the code for the paper "[BOTection:  Bot Detection by B
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
-
-What you need to install to use this code
-1- [Install Zeek/Bro](https://docs.zeek.org/en/current/install/install.html)
-```
-
-```
+In order to convert the PCAPs to Bro/Zeek logs, make sure to install [Zeek/Bro](https://docs.zeek.org/en/current/install/install.html)
 
 ### Installing
 
