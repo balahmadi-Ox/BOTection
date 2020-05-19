@@ -9,75 +9,44 @@ BOTection is content-agnostic and resilient to encryption, relying on high-level
 ## About
 This repository contains the code for the paper "[BOTection:  Bot Detection by Building Markov Chain Models of Bots' Network Behavior](https://seclab.bu.edu/people/gianluca/papers/botection-asiaccs2020.pdf)" to Appear in the [15th ACM ASIA Conference on Computer and Communications Security (ACM AsiaCCS'20)](https://asiaccs2020.cs.nthu.edu.tw).
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 In order to convert the PCAPs to Bro/Zeek logs, make sure to install [Zeek/Bro](https://docs.zeek.org/en/current/install/install.html)
 
-### Installing
+## Dataset
+In our paper, we used the following datasets:
+* [Stratosphere IPS](https://www.stratosphereips.org/datasets-overview)
+* [CTU-13](https://www.stratosphereips.org/datasets-ctu13)
+*[ISCX Botnet 2014 Dataset](https://www.unb.ca/cic/datasets/botnet.html)
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
 
+## Reproduce Evaluation
+
+The code runs inside a Docker container and requires `docker` and `docker-compose` to be installed in your system.
+
+You might be able to make this work on a generic python/anaconda environment with some effort. 
+  
+To reproduce the evaluation, follow these steps:
+ 1. **read the [paper](https://arxiv.org/pdf/2004.07088.pdf)** - this is the only way you will understand what you are doing
+ 1. Clone this repository
+ 1. download the [dataset](https://ora.ox.ac.uk/objects/uuid:1a04e852-e7e1-4981-aa83-f2e729371484) used in the paper, unzip the archive and place the downloaded `videos` folder in `seeing-red/data/`
+ 1. build and start the container by running `docker-compose up -d`
+ 1. attach to the container with `docker attach seeingred_er`
+ 1. in the container, `cd /home/code` and run the entire signal analysis pipeline with `python signal_run_all.py`
+
+Results will be produced in several subfolders in `seeing-red/data/`.
+
+## Citation
+If you use this repository please cite the paper as follows:
 ```
-Give the example
+@inproceedings{lovisotto2020seeing,
+  title={Seeing Red: PPG Biometrics Using Smartphone Cameras},
+  author={Lovisotto, Giulio and Turner, Henry and Eberz, Simon and Martinovic, Ivan},
+  booktitle={IEEE 15th Computer Society Workshop on Biometrics},
+  year={2020}
+}
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
