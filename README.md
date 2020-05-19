@@ -22,17 +22,19 @@ In our paper, we used the following datasets:
 ## How to run the code
 
 You can run this code on a python/anaconda environment. 
- - **read the [paper](https://seclab.bu.edu/people/gianluca/papers/botection-asiaccs2020.pdf)**, to understand how the system works!
+ - **Read the [paper](https://seclab.bu.edu/people/gianluca/papers/botection-asiaccs2020.pdf)**, to understand how the system works.
  - The code is split according to the system modules, described in the paper: 
-      * Network Flow Reassembly
+      * Network Flow Reassembly 
       * Connection State Extraction
       * Markov Chain Modeling
       * Detection (Binary Classifier)
       * Family Classification (Multi-Class Classifier)
- - Add you PCAPs to the PCAP folder in Data - benign samples in Benign sub-folder, malicicous in Malicious sub-folder, mix traffic in Mixed subfolder
+ - Add your PCAPs (dataset) to the PCAP sub-folder in Data - benign samples in Benign sub-folder, malicicous in Malicious sub-folder, mix traffic in Mixed subfolder
+ - You can execute each module individually, or execute the whole code by running:
  
- 
-
+ ```
+ python main.py
+ ```
 
 ## Citation
 If you use this repository please cite the paper as follows:
