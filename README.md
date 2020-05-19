@@ -15,10 +15,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What you need to install to use this code
 
 ```
-Give examples
+1- [Install Zeek/Bro](https://docs.zeek.org/en/current/install/install.html)
 ```
 
 ### Installing
