@@ -39,7 +39,7 @@ If you use this repository please cite the paper as follows:
   title={BOTection: bot detection by building Markov Chain models of bots network behavior},
   author={Alahmadi, B and Mariconti, E and Spolaor, R and Stringhini, G and Martinovic, I},
   year={October 5-9, 2020},
-  publisher={ASIA CCS '20, Proceedings of the 15th ACM Asia Conference on Computer and Communications Security}
+  publisher={Proceedings of the 15th ACM Asia Conference on Computer and Communications Security (AsiaCCS'20}
 }
 
 ```
