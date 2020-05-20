@@ -29,7 +29,7 @@ You can run this code on a python/anaconda environment.
       * [Markov Chain Modeling](https://github.com/balahmadi-Ox/BOTection/blob/master/final_code/3_MM_state_transition_Matrix.py)
       * [Detection (Binary Classifier)](https://github.com/balahmadi-Ox/BOTection/blob/master/final_code/4_Binary_Classifier.py)
       * [Family Classification (Multi-Class Classifier)](https://github.com/balahmadi-Ox/BOTection/blob/master/final_code/5_MultiClass_Classifier.py)
- - Add your PCAPs (dataset) to the PCAP sub-folder in Data - benign samples in Benign sub-folder, malicicous in Malicious sub-folder, mix traffic in Mixed subfolder
+ - Add your PCAPs (dataset) to the PCAP sub-folder in Data - benign samples in Benign sub-folder, malicious in Malicious sub-folder, mix traffic in Mixed subfolder
  - You need to execute each module individually in order.
 
 ## Citation
