@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[8]:
-
-
 """
 BOTection - MultiClass Classifier
 Created by balahmadi @balahmadi_OX
