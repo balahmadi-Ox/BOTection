@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[ ]:
-
-
 """
 BOTection - Network Flow Reassembly
 Created by balahmadi @balahmadi_OX
