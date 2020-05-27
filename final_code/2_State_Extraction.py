@@ -136,10 +136,10 @@ def readLogs_Mixed(fil,f_type ):
                 if dictmatrix_conn:
                     ensure_dir('./Data/Features/Mixed/Benign/conn_state/'   + str(n) + '/' + fil + '/')
                     ensure_dir('./Data/Features/Mixed/Benign/state_proto_service/'   + str(n) + '/' + fil + '/' )    
-                    with open('./Data/Features/Benign/conn_state/'  + str(n) + '/'+ fil + '/'+ ip +'.pickle', 'a') as handle:
+                    with open('./Data/Features/Mixed/Benign/conn_state/'  + str(n) + '/'+ fil + '/'+ ip +'.pickle', 'a') as handle:
                          pickle.dump(dictmatrix_conn, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-                    with open('./Data/Features/Benign/state_proto_service/'  +str(n) + '/'+ fil + '/'+ ip +'.pickle', 'a') as handle:
+                    with open('./Data/Features/Mixed/Benign/state_proto_service/'  +str(n) + '/'+ fil + '/'+ ip +'.pickle', 'a') as handle:
                          pickle.dump(dictmatrix_sig, handle, protocol=pickle.HIGHEST_PROTOCOL) 
 
 
