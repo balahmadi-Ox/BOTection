@@ -35,11 +35,16 @@ You can run this code on a python/anaconda environment.
 ## Citation
 If you use this repository please cite the paper as follows:
 ```
-@article{alahmadi2020botection,
-  title={BOTection: bot detection by building Markov Chain models of bots network behavior},
-  author={Alahmadi, B and Mariconti, E and Spolaor, R and Stringhini, G and Martinovic, I},
-  year={October 5-9, 2020},
-  publisher={Proceedings of the 15th ACM Asia Conference on Computer and Communications Security (AsiaCCS'20}
+@inproceedings{balahmadi_botection,
+author = {AlAhmadi, Bushra A. and Mariconti, Enrico and Spolaor, Riccardo and Stringhini, Gianluca and Martinovic, Ivan},
+title = {BOTection: Bot Detection by Building Markov Chain Models of Bots Network Behavior},
+year = {2020},
+publisher = {Association for Computing Machinery},
+booktitle = {Proceedings of the 15th ACM Asia Conference on Computer and Communications Security},
+pages = {652–664},
+numpages = {13},
+location = {Taipei, Taiwan},
+series = {ASIA CCS '20}
 }
 
 ```
