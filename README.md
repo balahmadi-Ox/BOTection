@@ -1,7 +1,7 @@
 # BOTection
  Bot Detection by Building Markov Chain Models of Bots Network Behavior
 
-![image of logo] (https://github.com/balahmadi-Ox/BOTection/blob/master/Bcolor2_textlogo_transparent_background.png)
+![image of logo](./Bcolor2_textlogo_transparent_background.png)
 
 
 
